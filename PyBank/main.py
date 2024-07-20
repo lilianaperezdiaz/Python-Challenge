@@ -3,7 +3,7 @@ import csv
 import pandas as pd 
 
 #Accessing data file from folders
-data_csv = os.path.join('PyBank', 'Resources', 'budget_data.csv')
+data_csv = os.path.join('Resources', 'budget_data.csv')
 
 # Declaring empty lists to store profit/loss data and monthly changes
 profloss = []
