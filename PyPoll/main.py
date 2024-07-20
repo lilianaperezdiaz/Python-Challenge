@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 #Accessing data file from folders
-csv_file = Path("PyPoll/Resources/election_data.csv")
+csv_file = Path("Resources/election_data.csv")
 #Declaring lists
 ballot = []
 county = []
