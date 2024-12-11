@@ -6,7 +6,8 @@ Using python to analyze the financial records of a company and calcualte profits
 ## PyBank
 *Results*
 <p> From our resutls we can see that the largest increated in profits occured in August while the largest decrease occured in Feburary. Over all the total fiancial change totaled to a decrease in $8311.11 over a total of 8 months. <p></p>
-``` title = "Financial Analysis"
+``` 
+title = "Financial Analysis"
 print(title)
 breaker = "----------------------------"
 print(breaker)
@@ -14,7 +15,9 @@ print(f"Total Months: {len(profloss)}")
 print(f"Total: ${total}")
 print(f"Average Change: ${avgchange:.2f}")
 print(f'Greatest Increase in Profits: $({max_increase})')
-print(f'Greatest Decrease in Profits: $({max_decrease})')```
+print(f'Greatest Decrease in Profits: $({max_decrease})')
+
+```
 <img width="319" alt="image" src="https://github.com/user-attachments/assets/c6bee8fd-4cb8-400c-8568-1e1e82cd702d">
 
 
