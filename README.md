@@ -14,13 +14,10 @@ Using python to analyze the financial records of a company and calcualte profits
         current_value = int(row[1])
         # Adding column 2 from file to profloss list
         profloss.append(current_value)
-        
-        
         # Calculating monthly change and adding to the list
         monthly_change = current_value - prev_value
         monthly_changes.append(monthly_change)
         prev_value = current_value
-    
     #Calculating profit change and adding to the list
     for r in profloss:
         prof_change = abs(r - (r+1))
@@ -40,10 +37,10 @@ else:
 `````
 
 <p> Once all of the data has been collected, the max and min integers in the profit list are searched to be able to print our final results. </p>
+```
 #Greatest Increase/Decrease in Profits
 max_increase = max(prof_clist)
 max_decrease = min(prof_clist)
-```
 # Printing Results
 title = "Financial Analysis"
 print(title)
