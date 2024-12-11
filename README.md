@@ -5,7 +5,8 @@ Using python to analyze the financial records of a company and calcualte profits
 
 ## PyBank
 *Results*
-<p> From our resutls we can see that the largest increated in profits occured in August while the largest decrease occured in Feburary. Over all the total fiancial change totaled to a decrease in $8311.11 over a total of 8 months. In order to find these results, all rows were iterated through and values were saved to the empty lists created. While iterating through rows and columns,the changes noticed in profits were being calcualted before appending value to assigned list. <p></p>
+<p> From our resutls we can see that the largest increated in profits occured in August while the largest decrease occured in Feburary. Over all the total fiancial change totaled to a decrease in $8311.11 over a total of 8 months. In order to find these results, all rows were iterated through and values were saved to the empty lists created. While iterating through rows and columns,the changes noticed in profits were being calcualted before appending value to assigned list. </p>
+
 ```
     # Iterating through all rows in csv_reader
     row = 0
