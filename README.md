@@ -38,6 +38,7 @@ else:
 `````
 
 <p> Once all of the data has been collected, the max and min integers in the profit list are searched to be able to print our final results. </p>
+
 ```
 #Greatest Increase/Decrease in Profits
 max_increase = max(prof_clist)
