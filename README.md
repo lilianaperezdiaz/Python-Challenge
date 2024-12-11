@@ -1,32 +1,18 @@
-# Python-Challenge
-Module 3 Challenge
-PyBank Instructions
-In this Challenge, you are tasked with creating a Python script to analyze the financial records of your company. You will be given a financial dataset called budget_data.csv. The dataset is composed of two columns: "Date" and "Profit/Losses".
+# PyBank and PyPoll Analysis
 
-Your task is to create a Python script that analyzes the records to calculate each of the following values:
+## Overview 
+Using python to analyze the financial records of a company and calcualte profits, losses, seaarch for increases and decreases. Using python we will also analyze the vote counting process using data from a small town. 
 
-The total number of months included in the dataset
+## PyBank
+*Results*
+From our resutls we can see that the largest increated in profits occured in August while the largest decrease occured in Feburary. Over all the total fiancial change totaled to a decrease in $8311.11 over a total of 8 months. 
 
-The net total amount of "Profit/Losses" over the entire period
+<img width="319" alt="image" src="https://github.com/user-attachments/assets/c6bee8fd-4cb8-400c-8568-1e1e82cd702d">
 
-The changes in "Profit/Losses" over the entire period, and then the average of those changes
 
-The greatest increase in profits (date and amount) over the entire period
+## PyPoll
 
-The greatest decrease in profits (date and amount) over the entire period
-___________________________________________________________-
+*Results*
+From the resutls we can see the percentage of votes each candidate accumulated from the total 369,711 voters. The winner of the ellection is declared as Diana DeGette as she obtainied 73.81% of the vote with Charles Casper Stockham coming in second place with 23.05% of the votes and Raymon Anthony Doane coming in last place with 3.14% of the votes. 
+<img width="276" alt="image" src="https://github.com/user-attachments/assets/0dac2004-b71d-4605-a893-1a89e1a70b2e">
 
-PyPoll Instructions
-In this Challenge, you are tasked with helping a small, rural town modernize its vote-counting process.
-
-You will be given a set of poll data called election_data.csv. The dataset is composed of three columns: "Voter ID", "County", and "Candidate". Your task is to create a Python script that analyzes the votes and calculates each of the following values:
-
-The total number of votes cast
-
-A complete list of candidates who received votes
-
-The percentage of votes each candidate won
-
-The total number of votes each candidate won
-
-The winner of the election based on popular vote
