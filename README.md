@@ -5,8 +5,43 @@ Using python to analyze the financial records of a company and calcualte profits
 
 ## PyBank
 *Results*
-<p> From our resutls we can see that the largest increated in profits occured in August while the largest decrease occured in Feburary. Over all the total fiancial change totaled to a decrease in $8311.11 over a total of 8 months. <p></p>
-```python  
+<p> From our resutls we can see that the largest increated in profits occured in August while the largest decrease occured in Feburary. Over all the total fiancial change totaled to a decrease in $8311.11 over a total of 8 months. In order to find these results, all rows were iterated through and values were saved to the empty lists created. While iterating through rows and columns,the changes noticed in profits were being calcualted before appending value to assigned list. <p></p>
+```
+    # Iterating through all rows in csv_reader
+    row = 0
+    for row in csv_reader:
+        #Creating variable for value of current row in column 2 
+        current_value = int(row[1])
+        # Adding column 2 from file to profloss list
+        profloss.append(current_value)
+        
+        
+        # Calculating monthly change and adding to the list
+        monthly_change = current_value - prev_value
+        monthly_changes.append(monthly_change)
+        prev_value = current_value
+    
+    #Calculating profit change and adding to the list
+    for r in profloss:
+        prof_change = abs(r - (r+1))
+        prof_clist.append(prof_change)
+`````
+<p>         
+
+# Net Total Profit/Loss
+total = sum(profloss)
+
+# Average Change in Profit/Loss
+if len(monthly_changes) > 0:
+    avgchange = sum(monthly_changes) / len(monthly_changes)
+else:
+    avgchange = 0
+
+#Greatest Increase/Decrease in Profits
+max_increase = max(prof_clist)
+max_decrease = min(prof_clist)
+
+# Printing Results
 title = "Financial Analysis"
 print(title)
 breaker = "----------------------------"
@@ -16,7 +51,6 @@ print(f"Total: ${total}")
 print(f"Average Change: ${avgchange:.2f}")
 print(f'Greatest Increase in Profits: $({max_increase})')
 print(f'Greatest Decrease in Profits: $({max_decrease})')
-```
 <img width="319" alt="image" src="https://github.com/user-attachments/assets/c6bee8fd-4cb8-400c-8568-1e1e82cd702d">
 
 
