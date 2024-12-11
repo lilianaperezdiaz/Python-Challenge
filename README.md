@@ -44,7 +44,7 @@ else:
 #Greatest Increase/Decrease in Profits
 max_increase = max(prof_clist)
 max_decrease = min(prof_clist)
-
+```
 # Printing Results
 title = "Financial Analysis"
 print(title)
@@ -55,6 +55,7 @@ print(f"Total: ${total}")
 print(f"Average Change: ${avgchange:.2f}")
 print(f'Greatest Increase in Profits: $({max_increase})')
 print(f'Greatest Decrease in Profits: $({max_decrease})')
+`````
 <img width="319" alt="image" src="https://github.com/user-attachments/assets/c6bee8fd-4cb8-400c-8568-1e1e82cd702d">
 
 
