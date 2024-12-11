@@ -26,8 +26,10 @@ Using python to analyze the financial records of a company and calcualte profits
         prof_change = abs(r - (r+1))
         prof_clist.append(prof_change)
 `````
-<p>         
+`````
+<p>Once all of the information was added to its respective lists the profits and loss list was summed to find the totoal at the end of the time frame provided in the data. Conditionals were created to test if any new data was added to the monthly changes list to be able to recalculate average change.</p>         
 
+```
 # Net Total Profit/Loss
 total = sum(profloss)
 
@@ -36,7 +38,9 @@ if len(monthly_changes) > 0:
     avgchange = sum(monthly_changes) / len(monthly_changes)
 else:
     avgchange = 0
+`````
 
+<p> Once all of the data has been collected, the max and min integers in the profit list are searched to be able to print our final results. </p>
 #Greatest Increase/Decrease in Profits
 max_increase = max(prof_clist)
 max_decrease = min(prof_clist)
