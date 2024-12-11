@@ -26,7 +26,6 @@ Using python to analyze the financial records of a company and calcualte profits
         prof_change = abs(r - (r+1))
         prof_clist.append(prof_change)
 `````
-`````
 <p>Once all of the information was added to its respective lists the profits and loss list was summed to find the totoal at the end of the time frame provided in the data. Conditionals were created to test if any new data was added to the monthly changes list to be able to recalculate average change.</p>         
 
 ```
