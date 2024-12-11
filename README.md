@@ -60,6 +60,77 @@ print(f'Greatest Decrease in Profits: $({max_decrease})')
 ## PyPoll
 
 *Results*
-<p> From the resutls we can see the percentage of votes each candidate accumulated from the total 369,711 voters. The winner of the ellection is declared as Diana DeGette as she obtainied 73.81% of the vote with Charles Casper Stockham coming in second place with 23.05% of the votes and Raymon Anthony Doane coming in last place with 3.14% of the votes. <p></p>
+<p> From the resutls we can see the percentage of votes each candidate accumulated from the total 369,711 voters. The winner of the ellection is declared as Diana DeGette as she obtainied 73.81% of the vote with Charles Casper Stockham coming in second place with 23.05% of the votes and Raymon Anthony Doane coming in last place with 3.14% of the votes. </p>
+
+<p>Looping through every row in the file, the data is read and stores in its respective lists these lists are then used to store the data in a dataframe. </p>
+
+```
+ballot = []
+county = []
+names = []
+#Opening the data file 
+with open(csv_file) as data_file:
+    #Dataframe (data_reader) *created a dataframe to read csv file, should be reading with CSV
+    data_reader = csv.reader(data_file, delimiter = ',')
+    #Looping through data and adding columns to appropraite lists 
+    for row in data_reader:
+
+        ballot.append(row[0])
+        county.append(row[1])
+        names.append(row[2])
+#Using lists to create a dataframe 
+data_df = pd.DataFrame(
+    {
+        'Ballot ID' : ballot,
+        'County' : county,
+        'Candidates' : names
+    })
+`````
+<p>Using the length of dataframe the votes are counted and votes are searched checking to see which candidate name is matched to caluclaute stats for all 3 candidates. </p>
+
+```
+#Declaring total votes
+votes = len(data_df) - 1
+
+
+#Searching dataframe for unique candidate names 
+unique_names = data_df['Candidates'].unique()
+print(unique_names)
+
+#Percentage of votes per candidate
+charles = [n for n in names if n == 'Charles Casper Stockham']
+charles = len(charles)
+charles_votes = round(((charles/votes)*100),3)
+
+diana = [n for n in names if n == 'Diana DeGette']
+diana = len(diana)
+diana_votes = round(((diana/votes)*100),3)
+
+raymon = [n for n in names if n == 'Raymon Anthony Doane']
+raymon = len(raymon)
+raymon_votes = round(((raymon/votes)*100),3)
+`````
+<p>utilizing the data collected per candidate, the votes are then comapred against one another to calculate the winning canidate. With the data collected and the winner selected the results are then printed. </p>
+
+```
+#Calculating winner 
+if charles > diana and charles > raymon:
+    winner = 'Charles Casper Stockham'
+elif diana > charles and diana > raymon:
+    winner = 'Diana DeGette'
+elif raymon > charles and raymon > diana:
+    winner = 'Raymon Anthony Doane'
+#Printing Results 
+print('Election Results')
+print("-------------------------")
+print(f'Total Votes: {votes}')
+print("-------------------------")
+print(f'Charles Casper Stockham: {charles_votes}% ({charles})')
+print(f'Diana DeGette: {diana_votes}% ({diana})')
+print(f'Raymon Anthony Doane: {raymon_votes}% ({raymon})')
+print("-------------------------")
+print(f'Winner: {winner}')
+print("-------------------------")
+`````
 <img width="276" alt="image" src="https://github.com/user-attachments/assets/0dac2004-b71d-4605-a893-1a89e1a70b2e">
 
